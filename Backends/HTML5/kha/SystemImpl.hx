@@ -436,14 +436,14 @@ class SystemImpl {
 
 			if (untyped canvas.getContext) {
 
-                // resize the framebuffer based on the devicePixelRatio and the canvas size
-                var devicePixelRatio = Browser.window.devicePixelRatio == null ? 1 : Browser.window.devicePixelRatio;
-                var framebufferWidth = canvas.clientWidth * devicePixelRatio;
-                var framebufferHeight = canvas.clientHeight * devicePixelRatio;
-                if(canvas.width != framebufferWidth || canvas.height != framebufferHeight){
-                    canvas.width = framebufferWidth;
-                    canvas.height = framebufferHeight;
-                }
+				// resize the framebuffer based on the devicePixelRatio and the canvas size
+				var devicePixelRatio = Browser.window.devicePixelRatio == null ? 1 : Browser.window.devicePixelRatio;
+				var framebufferWidth = canvas.clientWidth * devicePixelRatio;
+				var framebufferHeight = canvas.clientHeight * devicePixelRatio;
+				if(canvas.width != framebufferWidth || canvas.height != framebufferHeight){
+					canvas.width = framebufferWidth;
+					canvas.height = framebufferHeight;
+				}
 
 				System.render(0, frame);
 				if (SystemImpl.gl != null) {
